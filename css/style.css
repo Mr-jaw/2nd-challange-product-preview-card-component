@@ -1,0 +1,159 @@
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --fraunces: 'Fraunces', serif;
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cream);
+    font-family: var(--fraunces);
+}
+
+
+.img-mobile {
+    display: none;
+}
+
+.img-desktop {
+    max-width: 20em;
+    border-radius: .6em  0 0 .6em;
+}
+
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--white);
+    border-radius: .6em;
+    max-width: 40em;
+}
+
+.card .text {
+    margin: 2em;
+}
+
+.card h1 {
+    font-size: 0.8rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-family: var(--montserrat);
+    color: var(--dark-grayish-blue);
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin: .7em 0;
+    margin-right: .5em;
+}
+
+.card .description {
+    font-family: var(--montserrat);
+    color: var(--dark-grayish-blue);
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+.card .prices {
+    display: flex;
+    color: var(--dark-cyan);
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.card .current-price {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.card .old-price {
+    font-size: 0.9rem;
+    color: var(--dark-grayish-blue);
+    font-family: var(--montserrat);
+    text-decoration: line-through;
+    margin-left: 1.5em;
+}
+
+.card .add-cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--dark-cyan);
+    border: none;
+    padding: 1em;
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: var(--montserrat);
+    color: var(--white);
+    border-radius: 0.5em;
+    transition: background-color .2s ease-in-out;
+}
+
+.card .add-cart-btn:active {
+    background-color: var(--very-dark-blue);
+}
+
+.card .add-cart-btn img {
+    margin-right: .7em;
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+    bottom: 0;
+    position: absolute;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media (max-width: 40em) {
+
+    .card {
+        grid-template-columns: 1fr;
+        max-width: 22em;
+        margin: 1em;
+    }
+
+    .card h1 {
+        margin-top: 0;
+    }
+
+    .card h2 {
+        margin: .4em 0;
+    }
+
+    .img-mobile {
+        display: block;
+        max-width: 100%;
+        border-radius: .6em .6em 0 0
+    }
+
+    .img-desktop {
+        display: none;
+    }
+
+}
