@@ -79,7 +79,7 @@ body {
     display: flex;
     color: var(--dark-cyan);
     align-items: center;
-    margin-bottom: 1em;
+    margin-bottom: 1.1em;
 }
 
 .card .current-price {
